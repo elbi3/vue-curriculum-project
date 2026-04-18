@@ -6,7 +6,7 @@ In React we think of state as a "snapshot".
 React batches multiple updates and handles these asynchronously.
 There are times when we cannot acces the new value of an updated variable.
 This results in "stale" state values unless we use a state update function.
-Example: `setCount(prevCount => prevCount + 1`
+Example: `setCount(prevCount => prevCount + 1)`
 
 --> In React we use the `useState` hook, how does Vue handle this work?
 --> Does the "snapshot" concept also apply to Vue?
