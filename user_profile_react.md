@@ -3,7 +3,15 @@ React Assignment Translation
 User Profile
 
 points:
-1.
+1. Notice how awkward it is to do nested spread syntax.
+2. What will that be like if the object gets any more complicated?
+3. Notice the eventual need of a proper state manager like immer.
+
+--> [Setup your framework and library tools] *or* add to your previous assignment. (Do this because it is simpler!)
+
+You will:
+Create a small form that updates the address portion of a user profile.
+Display the form and the current values of the entire user profile.
 
 --> [Setup your framework and library tools] *or* add to your previous assignment. (Do this because it is simpler!)
 
