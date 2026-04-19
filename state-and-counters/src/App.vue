@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import Counter from "./Counter.vue";
+// import Counter from "./Counter.vue";
+import UserProfile from "./UserProfile.vue";
+// import Gallery from "./Gallery.vue";
+// import TaskManager from "./TaskManager.vue";
 
 </script>
 
@@ -9,7 +12,8 @@ import Counter from "./Counter.vue";
   </header>
   <main>
     <div class="container1">
-      <Counter />
+      <UserProfile />
+      <!-- <Counter /> -->
     </div>
   </main>
 </template>
