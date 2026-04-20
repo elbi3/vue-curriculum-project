@@ -1,15 +1,11 @@
 <script setup lang="ts">
 import { ref } from "vue";
+
 import recipes from "./data/recipeData.js"
 
 const currentRecipe = ref(0);
-const recipesState = ref(recipes);
-console.log("recipes array: ", recipes);
 
-function recipeCount(){
-    let max = recipes.length;
-    console.log("max: ", max);
-};
+console.log("recipes array: ", recipes);
 
 function next(){
     if(currentRecipe.value === (recipes.length-1)) {
@@ -21,7 +17,6 @@ function next(){
 function previous(){
     if(currentRecipe.value === 0) {
         currentRecipe.value = recipes.length;
-
     }
     currentRecipe.value--;
 };
