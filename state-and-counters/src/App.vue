@@ -14,8 +14,8 @@ import TaskManager from "./TaskManager.vue";
     <div class="container1">
       <!-- <UserProfile /> -->
       <!-- <Counter /> -->
-      <Gallery />
-      <!-- <TaskManager /> -->
+      <!-- <Gallery /> -->
+      <TaskManager />
     </div>
   </main>
 </template>
