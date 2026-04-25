@@ -24,4 +24,4 @@ and toggle their completed status on and off,
 7. implement a toggle function `toggletaskCompletion` that uses an `id` and updates the `completed` field 
 8. use a `.map()` Array method to make a *shallow copy* of the original array, where only the correct task is updated and remaining state is preserved
 9. display the tasks with their title and completion status
-10. include a radio? button next to each task to toggle completion status (this button should call our `toggletaskCompltion` function)
+10. include a radio? button next to each task to toggle completion status (this button should call our `toggletaskCompletion` function)

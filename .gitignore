@@ -1,0 +1,58 @@
+
+
+# Dependency directories
+/node_modules
+/docs
+
+.env
+
+.vscode-test
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Vue app dependencies
+my-vue-app/node_modules/
+
+# Build output
+my-vue-app/dist/
+
+# Env files
+my-vue-app/.env
+my-vue-app/.env.local
+my-vue-app/.env.*
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# VSCode optional
+.vscode/
+my-vue-app/.vscode/
+
+# Temporary files
+*.tmp
