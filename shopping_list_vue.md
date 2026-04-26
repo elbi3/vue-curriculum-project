@@ -1,27 +1,34 @@
 State Management with Pinia 🍍 in Vue (Use Pinia! #2)
 
-What hook from pinia? Instead of useImmer from Immer library for React. 
-How does Vue/pinia simplify nested state updates? What is mutating a draft state? 
-Instead of state immutability, Vue does...its thing. 
-1. in our subscriber project, we kept a single object in our store with "pinia". Now, we will store a collection
+points:
+1. learn about view reactivity concepts with store patterns
+2. in our subscriber project, we kept a single object in our store with "pinia". Now, we will store a collection.
+
+You will:
+display a grocery shopping list
+add logic to update your shopping list
+
 --> [Setup your framework and library tools] *or* add to your previous assignment. (Do this because it is simpler!)
+--> hopefully you already installed pinia in "Use Pinia! #1"
+--> hopefully you have `main.ts` set up with pinia as well!
 
-Install pinia 
+1. create a ShoppingList.vue component
+2. initialize state with pinia by creating a `shoppingList.js` store file in src/stores directory. note that best practice in Pinia is one store per domain/responsibility, so one file per store.
+3. import `defineStore` from pinia and import `reactive` from vue into thie `shoppingList.js` store file
+4. write the logic to define your shoppingList store by passing a unique name as the first argument to `defineStore`
+5. don't forget to put "use" at the beginning of your setup function like, `useShoppingListStore`.
+6. create a `shoppingList` array of objects, where each object has 
+- id: A unique identifier.
+- name: String.
+- quantity: Number.
+- details: A nested object containing category and notes. (I did `flavor`: `string`, and `sour`: `boolean` here)
+7. initialize state with `reactive`, passing the `shoppingList` array as its value
+8. create an action (a function in the store) to add an item the array, using any logic you want (maybe `array.push(item)`)
+9. create an action to delete (`array.splice(index, 1)`)
+10. create an action and to update (`array.find()`)
+11. render the shopping list in the browser
+12. add UI elements to allow for adding, updating, and removing items:
+13. map the functions to the UI elements (inputs, or buttons, you pick)
 
-Create a Subscriber.vue component-but better name omg. 
-Add name, email, contact details, preference fields. 
-Function updateContactDetails, 
-function toggleNewsletterSubscription,
 
-UI: add inputs for name, phone, address and toggle for subscription. 
-Display current data to show updates.
 
-If you haven't already, install pinia
-Initialize state with pinia, 
-and create a Shopping list component. 
-State should be an array of items with id, name, quantity, details. 
-Create functions addItem, updateItem, removeItem
-
-Add buttons and inputs to display shopping list and then to do the add update delete functions
-
-https://pinia.vuejs.org/getting-started.html
