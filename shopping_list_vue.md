@@ -1,7 +1,7 @@
 State Management with Pinia 🍍 in Vue (Use Pinia! #2)
 
 points:
-1. learn about view reactivity concepts with store patterns
+1. learn about vue reactivity concepts with store patterns
 2. in our subscriber project, we kept a single object in our store with "pinia". Now, we will store a collection.
 
 You will:
@@ -24,11 +24,13 @@ add logic to update your shopping list
 - details: A nested object containing category and notes. (I did `flavor`: `string`, and `sour`: `boolean` here)
 7. initialize state with `reactive`, passing the `shoppingList` array as its value
 8. create an action (a function in the store) to add an item the array, using any logic you want (maybe `array.push(item)`)
-9. create an action to delete (`array.splice(index, 1)`)
-10. create an action and to update (`array.find()`)
-11. render the shopping list in the browser
-12. add UI elements to allow for adding, updating, and removing items:
-13. map the functions to the UI elements (inputs, or buttons, you pick)
+9. how will you create an object to push to the array?
+10. create an action to delete (`array.splice(index, 1)`)
+11. create an action and to update (`array.find()`)
+12. render the shopping list in the browser
+13. add UI elements to allow for adding, updating, and removing items:
+14. map the functions to the UI elements (inputs, or buttons, you pick)
+15. take advantage of Vue's *declarative bindings*
 
 
 

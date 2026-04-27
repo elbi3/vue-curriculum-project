@@ -10,7 +10,7 @@ const subscriber = useSubscriberStore();
     <div class="updates">
         <div class="input-container">
             <label for="contactEmail">Change Your Email:&nbsp;</label> 
-            <input id="contactEmail" v-model="subscriber.contact.email">
+            <input id="contactEmail" v-model="subscriber.email">
         </div>
         <div class="input-container">
             <label for="contactPhone">Change Your Phone:&nbsp;</label> 
@@ -18,15 +18,15 @@ const subscriber = useSubscriberStore();
         </div>
         <div class="input-container">
             <label for="contactStreet">Change Your Street Address:&nbsp;</label> 
-            <input v-model="subscriber.contact.street">
+            <input v-model="subscriber.contact.address.street">
         </div>
         <div class="input-container">
             <label for="contactCity">Change Your City:&nbsp;</label> 
-            <input id="contactCity" v-model="subscriber.contact.city">
+            <input id="contactCity" v-model="subscriber.contact.address.city">
         </div>
         <div class="input-container">
             <label for="contactState">Change Your State:&nbsp;</label> 
-            <input id="contactState" v-model="subscriber.contact.state">
+            <input id="contactState" v-model="subscriber.contact.address.state">
         </div>
         <div class="input-container">
             <p class="message2">do you wish to subscribe to our newsletter?</p>
@@ -41,7 +41,7 @@ const subscriber = useSubscriberStore();
         <p class="name"><span class="tag">NAME</span> {{subscriber.name}}</p>
         <p class="email"><span class="tag">EMAIL</span> {{subscriber.email}}</p>
         <div class="contact">
-            <p class="contact-phone"><span class="tag">PHONE</span> {{subscriber.phone}}</p>//bug?
+            <p class="contact-phone"><span class="tag">PHONE</span> {{subscriber.phone}}</p>
             <p class="contact-address"><span class="tag">STREET</span> {{subscriber.contact.address.street}}</p>
             <p class="contact-address"><span class="tag">CITY</span> {{subscriber.contact.address.city}}</p>
             <p class="contact-address"><span class="tag">STATE</span> {{subscriber.contact.address.state}}</p>

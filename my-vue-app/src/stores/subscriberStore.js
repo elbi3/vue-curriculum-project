@@ -4,7 +4,7 @@ import { ref, reactive } from "vue";
 export const useSubscriberStore = defineStore("subscriber", () => {
     const name = ref("me");
     const email = ref("me@me.com");
-    const phone = ref("222-222-2222");//bug?
+    const phone = ref("222-222-2222");
     const contact = reactive({
         address: {street:"222 my street", city:"my-city", state:"my-reactive-state"}
     }); //phone, address fields
@@ -14,5 +14,5 @@ export const useSubscriberStore = defineStore("subscriber", () => {
     }); //newsletter, notifications fields
 
 
-    return { name, email, contact, preferences };
+    return { name, email, phone, contact, preferences };
 });

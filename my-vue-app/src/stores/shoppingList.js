@@ -11,17 +11,27 @@ export const useShoppingStore = defineStore("shopping", () => {
 
     function addItem(item){
         //validate object matches required format
-        list.push(item);
+        list.value.push(item);
+        console.log("pushed to list: ", item.name);
+        console.log("Added item: ", item);
     };
-    function updateItem(id){
-        list.filter((item) => {
-            if(id !== item.id) {
-                return item;
-            }
-        });
+
+    function updateItem(id, newVersion){
+        const found = list.value.find((item) => item.id === id);
+
+        if(!found) return;
+
+        found.name = newVersion.name;
+        found.quantity = newVersion.quantity;
+        found.details.flavor = newVersion.details.flavor;
+        found.details.sour = newVersion.details.sour;
+
     };
-    function deleteItem(){
-        list.splice(index, 1);
+
+    function deleteItem(id){
+        const index = list.value.findIndex((item) => item.id === id);
+        list.value.splice(index, 1);
     };
-    return { list };
+
+    return { list, addItem, updateItem, deleteItem };
 });

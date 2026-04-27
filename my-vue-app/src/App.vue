@@ -4,7 +4,7 @@ import UserProfile from "./UserProfile.vue";
 import Gallery from "./Gallery.vue";
 import TaskManager from "./TaskManager.vue";
 import Subscriber from "./Subscriber.vue";
-
+import ShoppingList from "./ShoppingList.vue";
 </script>
 
 <template>
@@ -17,7 +17,8 @@ import Subscriber from "./Subscriber.vue";
       <!-- <Counter /> -->
       <!-- <Gallery /> -->
       <!-- <TaskManager /> -->
-       <Subscriber />
+      <Subscriber />
+      <!-- <ShoppingList /> -->
     </div>
   </main>
 </template>
