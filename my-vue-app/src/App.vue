@@ -5,6 +5,7 @@ import Gallery from "./Gallery.vue";
 import TaskManager from "./TaskManager.vue";
 import Subscriber from "./Subscriber.vue";
 import ShoppingList from "./ShoppingList.vue";
+import DogInfo from "./DogInfo.vue";
 </script>
 
 <template>
@@ -17,8 +18,9 @@ import ShoppingList from "./ShoppingList.vue";
       <!-- <Counter /> -->
       <!-- <Gallery /> -->
       <!-- <TaskManager /> -->
-      <Subscriber />
+      <!-- <Subscriber /> -->
       <!-- <ShoppingList /> -->
+      <DogInfo />
     </div>
   </main>
 </template>
