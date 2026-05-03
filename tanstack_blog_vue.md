@@ -14,3 +14,5 @@ Create
 Display 
 
 To Do
+
+[Mutations](https://tanstack.com/query/latest/docs/framework/vue/guides/mutations)

@@ -25,6 +25,8 @@ app.use(VueQueryPlugin)
 4. call the `useQuery` hook and pass it an object containing a unique key and a function `fetchDogData` 
 6. note that you can destructure your "result" from the `useQuery` hook: [see third code sample here](https://tanstack.com/query/latest/docs/framework/vue/guides/queries#query-basics)
 5. fetch 1: implement the `fetchDogData` function: create a GET request to `https://dogapi.dog/api/v2/breeds`. `fetchDogData` must return a Promise! 
+5. I am using nested templates to map data using the `v-for` directive combined with scoped slots and a nested <template> element as a wrapper
+5. let's take a detour to explore the "vueUse" library!
 3. display the fetched list of dog breeds (maybe make a component?)
 4. handle API responses for different query states (`isPending`, `isError`, `isSuccess`)
 5. do this by communicating the different states to the user in the UI by showing a loading spinner, or an error message, or the data (success)
