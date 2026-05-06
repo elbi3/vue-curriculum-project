@@ -7,6 +7,7 @@ import Subscriber from "./Subscriber.vue";
 import ShoppingList from "./ShoppingList.vue";
 import DogInfo from "./DogInfo.vue";
 import VueQueryTemp from "./VueQueryTemp.vue";
+import BlogPosts from "./BlogPosts.vue";
 </script>
 
 <template>
@@ -22,7 +23,8 @@ import VueQueryTemp from "./VueQueryTemp.vue";
       <!-- <Subscriber /> -->
       <!-- <ShoppingList /> -->
       <!-- <DogInfo /> -->
-    <VueQueryTemp />
+    <!-- <VueQueryTemp /> -->
+    <BlogPosts />
     </div>
   </main>
 </template>
