@@ -6,6 +6,7 @@ import TaskManager from "./TaskManager.vue";
 import Subscriber from "./Subscriber.vue";
 import ShoppingList from "./ShoppingList.vue";
 import DogInfo from "./DogInfo.vue";
+import VueQueryTemp from "./VueQueryTemp.vue";
 </script>
 
 <template>
@@ -20,7 +21,8 @@ import DogInfo from "./DogInfo.vue";
       <!-- <TaskManager /> -->
       <!-- <Subscriber /> -->
       <!-- <ShoppingList /> -->
-      <DogInfo />
+      <!-- <DogInfo /> -->
+    <VueQueryTemp />
     </div>
   </main>
 </template>
