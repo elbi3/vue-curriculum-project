@@ -50,13 +50,6 @@ async function fetchDogBreeds(){
     //you can `return response.json()`, because `async` will unwrap the Promise returned from `response.json()`
 };
 
-async function findOne(id){
-    const found = breedList.value.find((element) => element.id === id);
-    if(found) {
-        found.visible = true;
-    };
-};
-
 async function fetchDogBreedsId({queryKey}){//tanstack passes a context object 
     const [ , id] = queryKey;
     let single = `https://dogapi.dog/api/v2/breeds/${id}`;
