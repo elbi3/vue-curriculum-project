@@ -22,9 +22,9 @@ import BlogPosts from "./BlogPosts.vue";
       <!-- <TaskManager /> -->
       <!-- <Subscriber /> -->
       <!-- <ShoppingList /> -->
-      <!-- <DogInfo /> -->
+      <DogInfo />
     <!-- <VueQueryTemp /> -->
-    <BlogPosts />
+    <!-- <BlogPosts /> -->
     </div>
   </main>
 </template>
