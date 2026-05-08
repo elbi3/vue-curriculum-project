@@ -2,6 +2,7 @@ Handle Blog Data with TanStack Query 🌴in Vue (Use TanStack! #2)
 
 Investigate
 How does `useMutation` work with the `mutate` function?
+Work with this pattern: `mutationFn(payloadObject)` 
 
 
 You will:
@@ -26,5 +27,10 @@ PUT/PATCH/DELETE need an id to target the url to target a specific resource
 DELETE doesn't need a body or `Content-Type` header
 PATCH only sends the fields you want to change, PUT sends the whole object
 
+note - don't forget! VueQuery mutations receive ONE argument, so make sure you have that object in place
+note - you can use `null` to represent empty, not-selected, not-loaded, inactive
+
 [Mutations](https://tanstack.com/query/latest/docs/framework/vue/guides/mutations)
 [useMutation](https://tanstack.com/query/latest/docs/framework/vue/reference/useMutation)
+[vue key value with v-for directive](https://vuejs.org/api/built-in-special-attributes.html#key)
+[and also on key](https://vuejs.org/guide/essentials/list.html#maintaining-state-with-key)
