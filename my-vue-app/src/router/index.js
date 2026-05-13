@@ -1,12 +1,14 @@
 //create the router instance
 
-import { createMemoryHistory, createRouter, createWebHistory } from "vue-router";
-
+import { createWebHistory, createRouter } from "vue-router";
+import Home from "@/views/Home.vue";
 //import views
 
-const routes = [];
+const routes = [
+    { path: '/', component: Home },
+];
 
 export const router = createRouter({
-    history: createMemoryHistory(),
+    history: createWebHistory(),
     routes,
 });
