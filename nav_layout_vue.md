@@ -45,6 +45,12 @@ let's make something that will "persist across navigation"
 10. make a `layouts` directory to work alongside `pages` (aka views) directory. `layouts` will contain components that include `<RouterView/>` in their code,
 and `pages` will contain components that are rendered by `<RouterView/>`. Smaller components (`<Counter/>`, `<Button/>`) go in the `components` directory.
 11. Refactor App.vue to be a template with a <RouterView/>. This is the root of the project, and will render layouts with their page content based on our router array
+12. Refactor component locations based on views and components. 
+13. Refactor repeated code into smaller components
+14. use `router.back()` to program a 'back button' for navigation *within* the app
+15. use `router.push()` to program a 'go home' for navigation if you've hit the page from *outside* the app 
+(maybe you started on "Gallery" and not "Home", so there's no browser history for the app)
+16. you can also use `router.go()`
 
 
 [router sestup guide](https://router.vuejs.org/guide/)
@@ -53,3 +59,5 @@ and `pages` will contain components that are rendered by `<RouterView/>`. Smalle
 
 [large example project](https://github.com/saymenghour/vue3-enterprise-boilerplate/blob/main/src/router/guards.ts)
 [small example project](https://github.com/kouts/vue3-ts-vite-starter-template/tree/main)
+--for `window.history.state`:
+[browser native API](https://developer.mozilla.org/en-US/docs/Web/API/History/state)
