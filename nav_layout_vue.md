@@ -15,7 +15,7 @@ export const posts = [
 
 ## Adding vue-router to the project
 1. install
-2. add `router`, `views` directories
+2. add `router`, `pages` directories
 3. import `createMemoryHistory` and `createRouter` into a new `index.js` file in `src/router`. 
 4. in `router/index.js` add routes array and export the router instance:
 ```js
@@ -26,7 +26,7 @@ export const router = createRouter({
     routes,
 });
 ```
-5. create views that will be imported into the `router/index.js` and add them to the routes array. Example code:
+5. create the page content components (stored in `pages` directory) that will be imported into the `router/index.js` and add them to the routes array. Example code:
 ```js
 import HomeView from './HomeView.vue'
 import AboutView from './AboutView.vue'
@@ -37,14 +37,19 @@ const routes = [
 ]
 ```
 6. import and register the plugin with `use()` in `main.ts`(always remember to call the `use()` plugin before `mount()`)
-7. implement composables `useRouter` and `useRoute` inside relevant components
+7. implement composables `useRouter` and `useRoute` inside relevant components as needed
 (the `router` object returned by `createRouter()` is our router instance we access it by calling `ueRouter()`. the current route is `route` and is accessed with `useRoute()`)
-8. consider a layout route: however Vue Router does not do layouts as in other frameworks, instead it uses nested routes, named views, and dynamic layouts with middleware. We will do a Nested route layout approach:
-- Layout contains <RouterView />, 
-- and child pages are rendered inside this
+let's make something that will "persist across navigation"
+8. Layout. Vue is not as opinionated about this as other frameworks. It favors its component composition over framework handling. 
+9. Make a layout component that uses <RouterView>. This will be a regular component that handles the abstraction and ideology that frameworks attempt to enforce
+10. make a `layouts` directory to work alongside `pages` (aka views) directory. `layouts` will contain components that include `<RouterView/>` in their code,
+and `pages` will contain components that are rendered by `<RouterView/>`. Smaller components (`<Counter/>`, `<Button/>`) go in the `components` directory.
+11. Refactor App.vue to be a template with a <RouterView/>. This is the root of the project, and will render layouts with their page content based on our router array
+
 
 [router sestup guide](https://router.vuejs.org/guide/)
 [dynamic routes](https://router.vuejs.org/guide/essentials/dynamic-matching.html#Dynamic-Route-Matching-with-Params)
+[nested routes](https://router.vuejs.org/guide/essentials/nested-routes.html)
 
 [large example project](https://github.com/saymenghour/vue3-enterprise-boilerplate/blob/main/src/router/guards.ts)
 [small example project](https://github.com/kouts/vue3-ts-vite-starter-template/tree/main)

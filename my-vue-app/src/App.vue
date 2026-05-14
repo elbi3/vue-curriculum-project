@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import Counter from "./Counter.vue";
+import { RouterView } from "vue-router";
+import Counter from "./components/Counter.vue";
 import UserProfile from "./UserProfile.vue";
 import Gallery from "./Gallery.vue";
 import TaskManager from "./TaskManager.vue";
@@ -11,22 +12,7 @@ import BlogPosts from "./BlogPosts.vue";
 </script>
 
 <template>
-  <header>
-    <h1>You did it!</h1>
-  </header>
-  <main>
-    <div class="container1">
-      <!-- <UserProfile /> -->
-      <!-- <Counter /> -->
-      <!-- <Gallery /> -->
-      <!-- <TaskManager /> -->
-      <!-- <Subscriber /> -->
-      <!-- <ShoppingList /> -->
-      <!-- <DogInfo /> -->
-    <!-- <VueQueryTemp /> -->
-    <BlogPosts />
-    </div>
-  </main>
+<RouterView />
 </template>
 
 <style>
