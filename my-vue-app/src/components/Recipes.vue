@@ -1,25 +1,29 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import { useRouter, useRoute } from "vue-router";
+import recipes from "@/data/recipeData.js";
 
-import recipes from "./data/recipeData.js"
+const router = useRouter();
+const route = useRoute();
 
-const currentRecipe = ref(0);
+//grab URL param if there, otherwise start at 0
+const currentRecipe = ref(Number(route.params.id) || 0);
 
-console.log("recipes array: ", recipes);
+function syncRoute() {
+    router.push({ name: "recipe", params: { id: currentRecipe.value }});
+};
 
 function next(){
-    if(currentRecipe.value === (recipes.length-1)) {
-        currentRecipe.value = 0;
-        return;
-    }
-    currentRecipe.value++;
+    const isLast = currentRecipe.value === recipes.length-1;
+    currentRecipe.value = isLast ? 0 : currentRecipe.value + 1;
+    syncRoute();
 };
 function previous(){
-    if(currentRecipe.value === 0) {
-        currentRecipe.value = recipes.length;
-    }
-    currentRecipe.value--;
+    const isFirst = currentRecipe.value === 0;
+    currentRecipe.value = isFirst ? recipes.length - 1 : currentRecipe.value - 1;
+    syncRoute();
 };
+
 </script>
 
 <template>
