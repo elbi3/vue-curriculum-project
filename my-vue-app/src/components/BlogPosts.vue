@@ -161,7 +161,7 @@ function handleSubmit(){
 <template>
     <div class="container">
         <form class="my-form" v-on:submit.prevent="handleSubmit">
-            <h2>Add a new post:</h2>
+            <h3>Add a new post:</h3>
             <div class="input-container">
                 <label for="blog-title">Post title:</label>
                 <input name="blog-title" type="text" class="title-input"v-model="newPost.title">
@@ -177,11 +177,16 @@ function handleSubmit(){
             <p>{{newPost.body}}</p>
         </section>
         <!-- //since template is invisble to the DOM, place the "key" on a "real" element: -->
+        <h2>Blog Posts:</h2>
         <template v-for="blog in blogsData" :key="blog.id">
             <section class="my-post">
                 <button class="fix" title="edit this post" @click="handleBlogPostEdit(blog.id, blog.title, blog.body)">🛠️</button>
                 <div class="blog-title-box">
-                    <h3 class="post-title">{{blog.title}}</h3>
+                    <RouterLink :to="`/blog/post/${blog.id}`">
+                        <h3 class="post-title">{{blog.title}}</h3>
+                    </RouterLink>
+                    <!-- <router-link :to="`/blog/${blog.id}`">
+                    </router-link> -->
                     <button class="pencil" title="edit title" @click="handleTitleEdit(blog.id, blog.title)">✏️</button>
                 </div>
                 <div class="blog-body-box">

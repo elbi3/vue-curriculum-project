@@ -9,7 +9,7 @@ import { RouterLink } from 'vue-router';
     </nav>
     <main class="home-main">
         <h2>hello! this is a learning space for the Vue metaframework</h2>
-        <p>if you would like to study any of the following topics, hit the links :D</p>
+        <p>if you would like to see code to study any of the following topics, hit the links :D</p>
         <ul>
             <li>forms</li>
         </ul>

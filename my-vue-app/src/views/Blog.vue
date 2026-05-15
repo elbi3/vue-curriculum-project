@@ -10,7 +10,6 @@ import BackButton from '@/components/BackButton.vue';
     </header>
     <nav>
         <BackButton />
-
     </nav>
     <main class="home-main">
         <RouterView />
