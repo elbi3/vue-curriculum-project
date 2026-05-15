@@ -31,7 +31,7 @@ const routes = [
     { path: "/blog", component: Blog,
         children: [
             { path: "", component: BlogPosts },
-            { path: "/post/:id", component: Post }
+            { path: "post/:id", component: Post }
         ]
      },
 ];

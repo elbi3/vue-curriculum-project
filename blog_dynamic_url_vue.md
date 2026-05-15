@@ -7,3 +7,9 @@ alternatively, you can use the object syntax:
 <RouterLink :to="{ name: 'blog', params: { id: blog.id } }"></RouterLink>
 ```
 your route will need a name to match this^ in your `router/index.js`
+
+`onMounted()` is functioning a bit like React's `useEffect`, where the fetch happens as a result of the Post component being added
+
+
+
+note: child paths should be relative with no leading slash in the router/index.js
