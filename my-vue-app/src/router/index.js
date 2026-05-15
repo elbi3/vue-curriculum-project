@@ -11,14 +11,15 @@ import Gallery from "@/views/Gallery.vue";
 import DogInfo from "../DogInfo.vue";
 import Counter from "@/components/Counter.vue";
 import Recipes from "@/components/Recipes.vue";
-
+import BlogPosts from "@/components/BlogPosts.vue";
+import Post from "@/components/Post.vue";
 
 const routes = [
     { path: '/', component: Layout,
         children: [
             { path: "", component: Home },
             { path: "counter", component: Counter },
-            { path: "dogs", component: DogInfo, }
+            { path: "dogs", component: DogInfo }
         ]
     },
     { path: "/gallery", component: Gallery, 
@@ -27,7 +28,12 @@ const routes = [
             { path: "recipes/:id", name: "recipe",  component: Recipes } 
         ]
      },
-    { path: "/blog", component: Blog },
+    { path: "/blog", component: Blog,
+        children: [
+            { path: "", component: BlogPosts },
+            { path: "/post/:id", component: Post }
+        ]
+     },
 ];
 
 const router = createRouter({
