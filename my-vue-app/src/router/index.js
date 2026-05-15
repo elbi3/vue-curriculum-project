@@ -10,6 +10,7 @@ import Gallery from "@/views/Gallery.vue";
 //import child components
 import DogInfo from "../DogInfo.vue";
 import Counter from "@/components/Counter.vue";
+import Recipes from "@/components/Recipes.vue";
 
 
 const routes = [
@@ -20,7 +21,12 @@ const routes = [
             { path: "dogs", component: DogInfo, }
         ]
     },
-    { path: "/gallery", component: Gallery },
+    { path: "/gallery", component: Gallery, 
+        children: [
+            { path: "", redirect: { name: "recipe", params: {id: 0} }},
+            { path: "recipes/:id", name: "recipe",  component: Recipes } 
+        ]
+     },
     { path: "/blog", component: Blog },
 ];
 

@@ -1,18 +1,9 @@
 <script setup lang="ts">
 import { RouterView } from "vue-router";
-import Counter from "./components/Counter.vue";
-import UserProfile from "./UserProfile.vue";
-import Gallery from "./Gallery.vue";
-import TaskManager from "./TaskManager.vue";
-import Subscriber from "./Subscriber.vue";
-import ShoppingList from "./ShoppingList.vue";
-import DogInfo from "./DogInfo.vue";
-import VueQueryTemp from "./VueQueryTemp.vue";
-import BlogPosts from "./BlogPosts.vue";
 </script>
 
 <template>
-<RouterView />
+  <RouterView />
 </template>
 
 <style>
