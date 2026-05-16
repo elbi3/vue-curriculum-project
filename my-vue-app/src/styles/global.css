@@ -80,13 +80,17 @@ select {
 :root[data-theme="dark"] {
   --bg: midnightblue;
   --text: gainsboro;
-  --accent: lemonchiffon;
+  --accent: lightsteelblue;
+  --surface: darkslateblue;
+  --button: lavender;
 }
 
 :root[data-theme="light"] {
-  --bg: gainsboro;
+  --bg: snow;
   --text: midnightblue;
-  --accent: darkslategray;
+  --accent: darkslateblue;
+  --surface: darkslateblue;
+  --button: thistle;
 }
 
 body {
@@ -113,7 +117,18 @@ main {
   flex: 1;
   gap: 1rem;
 }
+/* link styling */
+a,
+a:not(.router-link-active),
+a:not(.router-link-exact-active) {
+  text-decoration: none;
+  color: var(--accent);
+}
 /* vue gives you an active class for RouterLink: */
-.router-link-active {
+.router-link-active,
+.router-link-exact-active {
   font-weight: bold;
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: none;
 }

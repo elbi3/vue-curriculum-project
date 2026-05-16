@@ -119,7 +119,7 @@ async function fetchDogGroups(){
     </ul>
 </template>
 
-<style>
+<style scoped>
 .group,
 .dog-fact {
     background-color: aliceblue;

@@ -51,7 +51,7 @@ const subscriber = useSubscriberStore();
     </section>
 </template>
 
-<style>
+<style scoped>
     .subscriber {
         border: 2px solid navy;
         border-radius: .25rem;

@@ -2,10 +2,12 @@
 import { provide, ref } from "vue";
 import { RouterView } from "vue-router";
 
-// const mode = ref("light");
+const topUser = ref({
+    name: "Heidi",
+    email: "something-something77@fastest.mail",
+  });
 
-// function updateMode() {}
-// provide("theme", {mode, updateMode});
+provide("mpc", topUser);
 </script>
 
 <template>

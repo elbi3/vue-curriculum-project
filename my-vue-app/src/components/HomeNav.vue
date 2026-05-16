@@ -4,7 +4,7 @@ import ThemeToggle from '@/components/ThemeToggle.vue';
 </script>
 
 <template>
-    <nav>
+    <nav class="home-nav">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/gallery">Gallery</RouterLink>
         <RouterLink to="/blog">Blog</RouterLink>

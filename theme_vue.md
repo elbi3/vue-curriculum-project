@@ -6,41 +6,7 @@ React prefers to grab everything and shove it into JavaScript state handling, fo
 Vue developers often lean into CSS custom properties and app-level reactivity instead with `provide` and `inject`. This is also Vue's solution for "prop drilling".
 It is this author's opinion that a good practice is to own the theme at the HTML root level and let CSS custom properties cascade. For this, Vue can simply flip a single attribute.
 
-### on `provide` and `inject` with `ref`
-You can use Vue's built-in dependency injection with `provide` and `ref`
-```js
-// App.vue
-import { provide, ref } from 'vue'
 
-const theme = ref('light')
-
-provide('theme', theme)
-```
-and then:
-```js
-import { inject } from 'vue'
-
-const theme = inject('theme')
-```
-If you provide a value at a parent or root level, any descendant can inject it. This means no prop drilling and no boilerplate wrappers.
-So in App.vue you might have:
-```js
-// App.vue
-import { provide, ref } from 'vue'
-
-const theme = ref('light')
-const toggleTheme = () => theme.value = theme.value === 'light' ? 'dark' : 'light'
-
-provide('theme', { theme, toggleTheme })
-```
-and in a very-nested child component:
-```js
-// DeepChild.vue
-import { inject } from 'vue'
-
-const { theme, toggleTheme } = inject('theme')
-```
-The `provide()` function: it takes two arguments: the "injection key" and its "value". Component descendents use the key to lookup the value.
 ### on composables
 Introducing Vue's composables!
 Sometimes we want to reuse the same logic in multiple components (in our case, likely in *all* the components)
