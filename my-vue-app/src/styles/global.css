@@ -74,3 +74,20 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+/* END RESET -------------------------------------------- */
+
+:root[data-theme="dark"] {
+  --bg: midnightblue;
+  --text: gainsboro;
+}
+
+:root[data-theme="light"] {
+  --bg: gainsboro;
+  --text: midnightblue;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
