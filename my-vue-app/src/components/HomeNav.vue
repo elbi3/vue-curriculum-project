@@ -11,10 +11,3 @@ import ThemeToggle from '@/components/ThemeToggle.vue';
         <ThemeToggle />
     </nav>
 </template>
-
-<style>
-/* vue gives you an active class for RouterLink: */
-.router-link-active {
-  font-weight: bold;
-}
-</style>

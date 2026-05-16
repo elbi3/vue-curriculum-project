@@ -80,14 +80,40 @@ select {
 :root[data-theme="dark"] {
   --bg: midnightblue;
   --text: gainsboro;
+  --accent: lemonchiffon;
 }
 
 :root[data-theme="light"] {
   --bg: gainsboro;
   --text: midnightblue;
+  --accent: darkslategray;
 }
 
 body {
   background-color: var(--bg);
   color: var(--text);
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 1rem;
+}
+/* vue gives you an active class for RouterLink: */
+.router-link-active {
+  font-weight: bold;
 }

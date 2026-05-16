@@ -17,5 +17,3 @@ import HomeNav from '@/components/HomeNav.vue';
     </div>
 </template>
 
-<style>
-</style>

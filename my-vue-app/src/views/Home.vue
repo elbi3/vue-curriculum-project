@@ -18,26 +18,3 @@ import { RouterLink } from 'vue-router';
 
 </template>
 
-<style>
-    body {
-        display: flex;
-        flex-direction: column;
-        background-color: gainsboro;
-        color: midnightblue;
-        font-family: sans-serif;
-        min-height: 100vh;
-        text-rendering: optimizeSpeed;
-        line-height: 1.5;
-    }
-    h1{
-    display: flex;
-    justify-content: center;
-    }
-    main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-    gap: 1rem;
-    }
-</style>
