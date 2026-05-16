@@ -42,7 +42,7 @@ function updateAddress(){
     </section>
 </template>
 
-<style>
+<style scoped>
 .my-form {
     display: flex;
     flex-direction: column;

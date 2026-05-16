@@ -17,7 +17,7 @@ import Post from "@/components/Post.vue";
 const routes = [
     { path: '/', component: Layout,
         children: [
-            { path: "", component: Home },
+            { path: "", component: Home},
             { path: "counter", component: Counter },
             { path: "dogs", component: DogInfo }
         ]

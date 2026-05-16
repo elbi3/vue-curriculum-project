@@ -40,7 +40,7 @@ function addItem(){
 <pre>{{checkedTasks}}</pre>
 </template>
 
-<style>
+<style scoped>
     .box {
         display: flex;
         flex-direction: row;

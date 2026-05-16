@@ -92,7 +92,7 @@ function handleSubmit(){
     </div>
 </template>
 
-<style>
+<style scoped>
     .columns {
         gap: 1rem;
         display: flex;

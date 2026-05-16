@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import TinyCard from "./TinyCard.vue";
 
 const count = ref(0);
 
@@ -47,32 +48,52 @@ function incrementLaterStale() {
 </script>
 
 <template>
-    <p>{{count}}</p>
-    <button @click="increment">+1</button>
-    <button @click="incrementAfterDelay">+1 later</button>
-    <button @click="incrementTwice">+1 & +1</button>
-    <button @click="incrementLaterTwice">+1 later & +1 later</button>
-    <button @click="count++">+1</button>
-    <button @click="incrementLaterStale">+1 later STALE</button>
+    <div class="counter-wrapper">
+
+        <TinyCard />
+        <p class="total">{{count}}</p>
+        <div>
+            <button class="counter-button" @click="increment">+1</button>
+            <button class="counter-button" @click="incrementAfterDelay">+1 later</button>
+        </div>
+        <div>
+            <button class="counter-button" @click="incrementTwice">+1 & +1</button>
+            <button class="counter-button" @click="incrementLaterTwice">+1 later & +1 later</button>
+        </div>
+        <div>
+            <button class="counter-button" @click="count++">+1</button>
+            <button class="counter-button" @click="incrementLaterStale">+1 later STALE</button>
+        </div>
+    </div>
 </template>
 
-<style scoped>
-    button {
-        font-family: inherit;
-        background-color: thistle;
-        border: 1px solid darkslateblue;
-        border-radius: .25rem;
-        color: inherit;
-        max-width: 20ch;
-        padding-inline: .5rem;
-        margin: .5rem;
+<style >
+.counter-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.total {
+    font-size: larger;
+    font-weight: 900;
+}
+.counter-button {
+    font-family: inherit;
+    background-color: var(--button);
+    color: var(--surface);
+    border: 1px solid darkslateblue;
+    border-radius: .25rem;
+    /* color: inherit; */
+    max-width: 20ch;
+    padding-inline: .5rem;
+    margin: .5rem;
     }
-    button:hover{
-        border: 1px solid midnightblue;
-        background-color: darkslateblue;
-        color: aliceblue;
-    }
-    button:active{
-        background-color: purple;
-    }
+.counter-button:hover{
+    border: 1px solid midnightblue;
+    background-color: darkslateblue;
+    color: aliceblue;
+}
+.counter-button:active{
+    background-color: purple;
+}
 </style>

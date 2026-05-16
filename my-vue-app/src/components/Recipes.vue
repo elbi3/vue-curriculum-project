@@ -38,10 +38,10 @@ function previous(){
     </div>
 </template>
 
-<style>
+<style scoped>
     .image-display{
-            display: flex;
-            flex-direction: column;
+        display: flex;
+        flex-direction: column;
     };
     .btn-container{
         display: flex;

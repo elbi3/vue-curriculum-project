@@ -4,7 +4,6 @@ import HomeHeader from '@/components/HomeHeader.vue';
 import HomeFooter from '@/components/HomeFooter.vue';
 import HomeNav from '@/components/HomeNav.vue';
 
-
 </script>
 
 <template>
@@ -18,5 +17,3 @@ import HomeNav from '@/components/HomeNav.vue';
     </div>
 </template>
 
-<style>
-</style>

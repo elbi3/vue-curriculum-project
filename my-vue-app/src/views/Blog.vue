@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
 import BackButton from '@/components/BackButton.vue';
+import HomeNav from '@/components/HomeNav.vue';
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import BackButton from '@/components/BackButton.vue';
         <h1 class="home-title">Vue App Playground</h1>
     </header>
     <nav>
+        <HomeNav />
         <BackButton />
     </nav>
     <main class="home-main">

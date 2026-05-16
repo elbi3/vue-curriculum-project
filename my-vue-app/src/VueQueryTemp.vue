@@ -99,6 +99,3 @@ async function fetchBlogs(){
     </div>
 </template>
 
-<style>
-
-</style>
