@@ -7,6 +7,7 @@ import Layout from "@/layouts/Layout.vue";
 import Home from "@/views/Home.vue";
 import Blog from "@/views/Blog.vue";
 import Gallery from "@/views/Gallery.vue";
+import Playground from "@/views/Playground.vue";
 //import child components
 import DogInfo from "@/components/DogInfo.vue";
 import Counter from "@/components/Counter.vue";
@@ -17,7 +18,6 @@ import ShoppingList from "@/components/ShoppingList.vue";
 import TaskManager from "@/components/TaskManager.vue";
 import Subscriber from "@/components/Subscriber.vue";
 import UserProfile from "@/components/UserProfile.vue";
-
 const routes = [
     { path: '/', component: Layout,
         children: [
@@ -42,6 +42,7 @@ const routes = [
             { path: "post/:id", component: Post }
         ]
      },
+    { path: "/playground", component: Playground }
 ];
 
 const router = createRouter({

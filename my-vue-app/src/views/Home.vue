@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Counter from '@/components/Counter.vue';
 import { RouterLink } from 'vue-router';
 </script>
 

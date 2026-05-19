@@ -164,7 +164,7 @@ function handleSubmit(){
             <h3>Add a new post:</h3>
             <div class="input-container">
                 <label for="blog-title">Post title:</label>
-                <input name="blog-title" type="text" class="title-input"v-model="newPost.title">
+                <input name="blog-title" type="text" class="title-input" v-model="newPost.title">
             </div>
             <div class="input-container">
                 <label for="post-content">Post content:</label>
