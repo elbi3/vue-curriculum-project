@@ -45,7 +45,7 @@ stateful logic involves managing state that changes over time.
 ```js
 document.documentElement  ===  <html>  ===  :root (in CSS)
 ```
-9. use the `watch` vue function to set the theme to localstorage
+9. use the `watch` vue function to set the theme to localstorage if you want to try out localstorage
 
 [what is a "Composable"?](https://vuejs.org/guide/reusability/composables.html#what-is-a-composable)
 [provide/inject](https://vuejs.org/guide/components/provide-inject.html#provide-inject)

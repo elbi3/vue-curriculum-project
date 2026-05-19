@@ -8,18 +8,26 @@ import Home from "@/views/Home.vue";
 import Blog from "@/views/Blog.vue";
 import Gallery from "@/views/Gallery.vue";
 //import child components
-import DogInfo from "../DogInfo.vue";
+import DogInfo from "@/components/DogInfo.vue";
 import Counter from "@/components/Counter.vue";
 import Recipes from "@/components/Recipes.vue";
 import BlogPosts from "@/components/BlogPosts.vue";
 import Post from "@/components/Post.vue";
+import ShoppingList from "@/components/ShoppingList.vue";
+import TaskManager from "@/components/TaskManager.vue";
+import Subscriber from "@/components/Subscriber.vue";
+import UserProfile from "@/components/UserProfile.vue";
 
 const routes = [
     { path: '/', component: Layout,
         children: [
             { path: "", component: Home},
             { path: "counter", component: Counter },
-            { path: "dogs", component: DogInfo }
+            { path: "dogs", component: DogInfo },
+            { path: "shopping", component: ShoppingList },
+            { path: "tasks", component: TaskManager },
+            { path: "subscriber", component: Subscriber },
+            { path: "user-profile", component: UserProfile }
         ]
     },
     { path: "/gallery", component: Gallery, 
