@@ -83,6 +83,7 @@ select {
   --accent: lightsteelblue;
   --surface: darkslateblue;
   --button: lavender;
+  --active: orchid;
 }
 
 :root[data-theme="light"] {
@@ -91,6 +92,7 @@ select {
   --accent: darkslateblue;
   --surface: darkslateblue;
   --button: thistle;
+  --active: magenta;
 }
 
 body {
@@ -131,4 +133,46 @@ a:not(.router-link-exact-active) {
   color: var(--accent);
   cursor: pointer;
   text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* HOME VIEW */
+.topical-site-navigation {
+  border: 1px solid darkgray;
+}
+
+.home-content-links {
+  list-style: none;
+  padding: .5rem;
+  margin: 0;
+}
+
+.home-content-links > li > *:hover {
+  color: var(--active);
+}
+
+.home-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: var(--button);
+  margin: 0;
+  padding: 0;
+}
+
+.home-nav > * {
+  margin: 0;
+  padding: 0;
+  font-size: large;
+}
+
+.home-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.title-div {
+  width: 90%;
 }
