@@ -54,7 +54,7 @@ async function sleep() {
 
 const onSubmit = handleSubmit(async (values) => {
     await sleep();
-
+    console.log("submit values: ", values);
     resetForm()
     state.value = { fullName: "", email: "", password: "", confPassword: "", role: "", terms: false }
 });
@@ -93,7 +93,7 @@ const onSubmit = handleSubmit(async (values) => {
             <div class="input-container">
                 <label class="my-label" for="role">Role:</label>
                 <select v-model="role">
-                    <option disabled value="">Please select one</option>
+                    <option disabled value="Choose your role">Please select one</option>
                     <option>Developer</option>
                     <option>Manager</option>
                     <option>Designer</option>
@@ -110,6 +110,15 @@ const onSubmit = handleSubmit(async (values) => {
         </div>
         <button :disabled="isSubmitting">{{isSubmitting? "Registering..." : "submit"}}</button>
     </form>
+
+    <section class="user-registration">
+        <p>{{state?.fullName}}</p>
+        <p>{{state?.email}}</p>
+        <p>{{state?.password}}</p>
+        <p>{{state?.role}}</p>
+        <p>{{`Terms accepted: ${state?.terms}`}}</p>
+    </section>
+
 </template>
 
 <style scoped>
