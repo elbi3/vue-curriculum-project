@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { watch } from "vue";
+import { useTemplateRef, onMounted, watch } from "vue";
 import { useField, useForm } from "vee-validate";
 import { toTypedSchema } from "@vee-validate/yup";
 import { object, string, boolean, ref as yupRef } from "yup";
 import { useStorage } from "@vueuse/core";
+
 
 const { values, handleSubmit, isSubmitting, resetForm, meta } = useForm({
     validationSchema: toTypedSchema(
@@ -27,8 +28,10 @@ const { value: confPassword, errorMessage: confPasswordError } = useField("confP
 const { value: role, errorMessage: roleError } = useField("role");
 const { value: terms, errorMessage: termsError } = useField("terms");
 
-watch(values, (newValues) => {
-    state.value = { ...newValues };
+const fullNameRef = useTemplateRef("fullNameRef");
+
+onMounted(() => {
+    fullNameRef.value?.focus();
 });
 
 const state = useStorage("form-store", {
@@ -40,9 +43,12 @@ const state = useStorage("form-store", {
     terms: false
 });
 //vueuse implements a reactive `ref` under the hood^
-
+watch(values, (newValues) => {
+    state.value = { ...newValues };
+});
+//make sure this^ "watch" line is *after* state is declared with `useStorage`
 async function sleep() {
-    new Promise(resolve => setTimeout(resolve, 2000))
+    await new Promise(resolve => setTimeout(resolve, 2000))
     console.log('Waited 2 seconds');
 }
 
@@ -61,20 +67,28 @@ const onSubmit = handleSubmit(async (values) => {
         <div class="form-inputs-group">
             <div class="input-container">
                 <label class="my-label" for="full-name">Full Name:</label>
-                <input class="my-input" name="full-name" type="text" v-model="fullName">
+                <input class="my-input" 
+                name="full-name" 
+                type="text" 
+                v-model="fullName"
+                ref="fullNameRef"
+                >
                 <span v-if="fullNameError">{{fullNameError}}</span>
             </div>
             <div class="input-container">
                 <label class="my-label" for="email">Email:</label>
                 <input class="my-input" name="email" type="text" v-model="email">
+                <span v-if="emailError">{{emailError}}</span>
             </div>
             <div class="input-container">
                 <label class="my-label" for="password">Password:</label>
                 <input class="my-input" name="password" type="text" v-model="password">
+                <span v-if="passwordError">{{passwordError}}</span>
             </div>
             <div class="input-container">
                 <label class="my-label" for="conf-password">Confirm Password:</label>
                 <input class="my-input" name="conf-password" type="text" v-model="confPassword">
+                <span v-if="confPasswordError">{{confPasswordError}}</span>
             </div>
             <div class="input-container">
                 <label class="my-label" for="role">Role:</label>
@@ -86,13 +100,15 @@ const onSubmit = handleSubmit(async (values) => {
                     <option>Stakeholder</option>
                     <option>Lead</option>
                 </select>
+                <span v-if="roleError">{{roleError}}</span>
             </div>            
             <div class="input-container">
                 <input type="checkbox" id="checkbox" v-model="terms" />
                 <label class="my-label" for="checkbox"> ⬅️ I agree to the Terms & Conditions</label>
             </div>
+            <span v-if="termsError">{{termsError}}</span>
         </div>
-        <button :disabled="isSubmitting">Back to blog posts</button>
+        <button :disabled="isSubmitting">{{isSubmitting? "Registering..." : "submit"}}</button>
     </form>
 </template>
 

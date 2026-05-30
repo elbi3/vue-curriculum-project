@@ -38,3 +38,17 @@ onClick={handleDelete(id)}
 ```
 this^ runs on render. Vue's templates work differently.
 `@click="handleDelete(id)"` is an expression to run later.
+
+## `<script setup>` ordering of code:
+1. imports
+2. composable calls (useForm, useField, useStorage)
+3. derived state & watches
+4. functions & handlers
+
+## quick
+### attributes:
+`:` is shorthand for `v-bind`--> binds a dynamic JavaScript expression to an attribute
+example: `:disabled`
+### events:
+`@` is shorthand for `v-on`--> binds event listeners
+example: `@submit`
