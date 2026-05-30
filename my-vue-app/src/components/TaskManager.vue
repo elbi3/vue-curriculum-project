@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { reactive, ref } from "vue";
-import tasks from "./data/tasks.js";
+import tasks from "../data/tasks.js";
 
 //make a copy of "tasks" so we are not mutating state shared with another file:
 const checkedTasks = reactive([...tasks]);

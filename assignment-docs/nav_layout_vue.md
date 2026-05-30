@@ -1,3 +1,5 @@
+(I think I combined the blog post and recipe gallery refactor with navigation assignments?)
+
 1. either start up a new project with the routing option selected, or incorporate React Router with its npm install
 2. create a file for dummy data:
 ```js
