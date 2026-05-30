@@ -6,7 +6,7 @@ import { object, string, boolean, ref as yupRef } from "yup";
 import { useStorage } from "@vueuse/core";
 
 
-const { values, handleSubmit, isSubmitting, resetForm, meta } = useForm({
+const { values, handleSubmit, isSubmitting, resetForm } = useForm({
     validationSchema: toTypedSchema(
         object({
             fullName: string().min(3).required(),
@@ -118,7 +118,6 @@ const onSubmit = handleSubmit(async (values) => {
         <p>{{state?.role}}</p>
         <p>{{`Terms accepted: ${state?.terms}`}}</p>
     </section>
-
 </template>
 
 <style scoped>

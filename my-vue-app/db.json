@@ -1,9 +1,10 @@
 {
   "profile": {
-    "id": 1,
-    "username": "",
+    "username": "me",
     "email": "",
     "bio": "",
-    "notifications": false
-  }
+    "notifications": false,
+    "id": 1
+  },
+  "$schema": "./node_modules/json-server/schema.json"
 }
