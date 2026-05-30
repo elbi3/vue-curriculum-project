@@ -19,6 +19,7 @@ import TaskManager from "@/components/TaskManager.vue";
 import Subscriber from "@/components/Subscriber.vue";
 import UserProfile from "@/components/UserProfile.vue";
 import UserRegistration from "@/components/UserRegistration.vue";
+import Data from "@/components/Data.vue";
 
 const routes = [
     { path: '/', component: Layout,
@@ -30,7 +31,8 @@ const routes = [
             { path: "tasks", component: TaskManager },
             { path: "subscriber", component: Subscriber },
             { path: "user-profile", component: UserProfile },
-            { path: "user-registration", component: UserRegistration }
+            { path: "user-registration", component: UserRegistration },
+            { path: "data", component: Data },
         ]
     },
     { path: "/gallery", component: Gallery, 
