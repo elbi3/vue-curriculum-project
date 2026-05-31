@@ -1,5 +1,13 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import { RouterLink } from 'vue-router';
+import { useWindowSize } from "@/composables/useWindowSize";
+
+const { width, height } = useWindowSize();
+const colorChange = computed(() => {
+    return width.value < 600 ? "papayawhip" : "aliceblue";
+});
+
 </script>
 
 <template>
@@ -17,6 +25,11 @@ import { RouterLink } from 'vue-router';
                 <li><RouterLink to="/counter">➡️ I want play with counters.</RouterLink></li>
             </ul>
         </nav>
+        <div class="home-window" :style="{backgroundColor: colorChange}">
+            <h3>Resize the browser!</h3>
+            <p>Width: {{width}}</p>
+            <p>Height: {{height}}</p>
+        </div>
         <RouterView />
     </main>
 

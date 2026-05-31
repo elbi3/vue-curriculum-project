@@ -144,11 +144,15 @@ a:not(.router-link-exact-active) {
 }
 
 /* HOME VIEW */
+.home-window,
 .topical-site-navigation {
   border: 2px solid darkgray;
   border-radius: .25rem;
 }
 
+.home-window {
+  padding: .5rem;
+}
 .home-content-links {
   list-style: none;
   padding: .5rem;
