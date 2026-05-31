@@ -16,6 +16,7 @@
     "@tanstack/vue-query": "^5.100.8",
     "@vee-validate/yup": "^4.15.1",
     "@vueuse/core": "^14.3.0",
+    "chart.js": "^4.5.1",
     "pinia": "^3.0.4",
     "playwright": "^1.60.0",
     "vee-validate": "^4.15.1",
