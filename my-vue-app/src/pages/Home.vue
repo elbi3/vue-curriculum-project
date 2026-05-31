@@ -4,6 +4,7 @@ import { RouterLink } from 'vue-router';
 import { useWindowSize } from "@/composables/useWindowSize";
 
 const { width, height } = useWindowSize();
+
 const colorChange = computed(() => {
     return width.value < 600 ? "papayawhip" : "aliceblue";
 });
