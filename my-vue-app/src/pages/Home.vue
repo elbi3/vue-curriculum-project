@@ -2,7 +2,7 @@
 import { computed } from "vue";
 import { RouterLink } from 'vue-router';
 import { useWindowSize } from "@/composables/useWindowSize";
-
+import Chart from "@/components/Chart.vue";
 const { width, height } = useWindowSize();
 
 const colorChange = computed(() => {
@@ -32,6 +32,9 @@ const colorChange = computed(() => {
             <p>Height: {{height}}</p>
         </div>
         <RouterView />
+        <div>
+            <Chart/>
+        </div>
     </main>
 
 </template>
