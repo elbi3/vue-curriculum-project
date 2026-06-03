@@ -52,3 +52,17 @@ example: `:disabled`
 ### events:
 `@` is shorthand for `v-on`--> binds event listeners
 example: `@submit`
+
+### compare the syntax tools:
+| Syntax    | Meaning             |
+| --------- | ------------------- |
+| `:`       | bind data into HTML |
+| `@`       | listen for events   |
+| `v-model` | two-way binding     |
+
+### like so:
+```js
+:class="activeClass"
+@click="handleClick"
+v-model="username"
+```

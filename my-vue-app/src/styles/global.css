@@ -158,6 +158,34 @@ a:not(.router-link-exact-active) {
   padding: .5rem;
   margin: 0;
 }
+.accessibility-demo-container {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid thistle; */
+  width: 100%;
+}
+.reluctant {
+  flex-grow: 1;
+  width: 100%;
+  align-self: flex-end;
+  color: darkslateblue;
+  font-weight: 700;
+  font-size: larger;
+}
+
+.home-content-links.accessibility {
+  background-color: lemonchiffon;
+  color: midnightblue;
+  font-weight: 700;
+  gap: .5rem;
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+}
 
 .home-content-links > li > * {
   color: var(--surface);
