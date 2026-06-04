@@ -49,9 +49,3 @@ const accessibilityView  = useLocalStorage(
     </main>
 
 </template>
-
-<style>
-.check {
-    color: green;
-}
-</style>

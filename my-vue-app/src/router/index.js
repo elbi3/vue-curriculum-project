@@ -8,6 +8,7 @@ import Home from "@/pages/Home.vue";
 import Blog from "@/pages/Blog.vue";
 import Gallery from "@/pages/Gallery.vue";
 import Playground from "@/pages/Playground.vue";
+import ErrorTest from "@/pages/ErrorTest.vue";
 //import child components
 import DogInfo from "@/components/DogInfo.vue";
 import Counter from "@/components/Counter.vue";
@@ -33,6 +34,7 @@ const routes = [
             { path: "user-profile", component: UserProfile },
             { path: "user-registration", component: UserRegistration },
             { path: "data", component: Data },
+            { path: "/error-test", component: ErrorTest }
         ]
     },
     { path: "/gallery", component: Gallery, 
@@ -48,6 +50,7 @@ const routes = [
         ]
      },
     { path: "/playground", component: Playground }, 
+    
 ];
 
 const router = createRouter({
